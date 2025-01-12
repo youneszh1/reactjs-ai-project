@@ -3,7 +3,7 @@ import { Link, Outlet, useNavigate } from 'react-router-dom';
 import { Affix, CustomProvider, Header, Container, Panel } from 'rsuite';
 import Sidenavbar from './Sidenav/Sidnav';
 import CreativeNavbar from './Navbar';
-import { useQuizContext } from '../Context/Context';
+import { useQuizContext } from './myContext.js';
 
 const Layout = () => {
     const [active, setActive] = useState('home');

@@ -7,7 +7,7 @@ import { FaSun, FaMoon } from 'react-icons/fa';
 
 
 
-import { useQuizContext } from '../Context/Context';
+import { useQuizContext } from './myContext.js';
 
 function CreativeNavbar({}) {
     const { dark, darkMode } = useQuizContext();

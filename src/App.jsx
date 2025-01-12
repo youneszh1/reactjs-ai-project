@@ -3,7 +3,7 @@ import { Button, CustomProvider, DatePicker } from 'rsuite'
 import Layout from './Layout/Layout'
 import { Route, Routes } from 'react-router-dom';
 import NotFound from './NotFound';
-import { QuizContext } from './Context/Context';
+import { MyContext } from './Layout/myContext.js';
 import PollinationsChat from './Components/AiPollinations/PollinationsChat';
 import PollinationsImageGenerator from './Components/AiPollinations/PollinationsImageGenerator';
 import HomePage from './Components/Quizzes/HomePage.jsx';
@@ -21,7 +21,7 @@ function App() {
   
   return (
     <CustomProvider theme={dark ? 'dark' : 'light'}>
-      <QuizContext.Provider value={{dark, setDark, darkMode}} >
+      <MyContext.Provider value={{dark, setDark, darkMode}} >
         <div className='p-2'>
           <Routes>
             <Route path="/" element={<Layout />}>
@@ -35,7 +35,7 @@ function App() {
             </Route>
           </Routes>
         </div>
-      </QuizContext.Provider>
+      </MyContext.Provider>
     </CustomProvider>
   )
 }
